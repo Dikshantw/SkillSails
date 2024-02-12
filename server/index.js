@@ -14,9 +14,10 @@ app.use(express.json());
 app.use(cors());
 app.use("/admin", adminRouter);
 app.use("/users", userRouter);
-//mongodb://127.0.0.1:27017/courses
+const databaseUrl = import.meta.env.VITE_URL;
+
 mongoose
-  .connect("mongodb://127.0.0.1:27017/courses", {
+  .connect(databaseUrl, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     dbName: "courses",
