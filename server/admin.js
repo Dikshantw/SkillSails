@@ -64,7 +64,7 @@ router.put("/courses/:courseId", authenticatejwt, async (req, res) => {
   }
 });
 
-router.get("/courses", authenticatejwt, async (req, res) => {
+router.get("/courses", async (req, res) => {
   const courses = await Course.find({});
   res.json({ courses });
 });
