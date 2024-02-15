@@ -1,6 +1,6 @@
 import express from "express";
 
-import { User, Admin, Course } from "./database.js";
+import { Admin, Course } from "./database.js";
 import { SECRET, authenticatejwt } from "./authentication.js";
 import jwt from "jsonwebtoken";
 

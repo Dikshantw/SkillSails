@@ -1,6 +1,5 @@
 import express from "express";
-import mongoose from "mongoose";
-import { User, Admin, Course } from "./database.js";
+import { User, Course } from "./database.js";
 import { SECRET, authenticatejwt } from "./authentication.js";
 import jwt from "jsonwebtoken";
 
